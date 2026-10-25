@@ -1,5 +1,4 @@
 import { expect, test } from "@jest/globals";
-
 import { countVowels, isEven, palindrome } from "../src/functions";
 
 test("isEven returns true for an even number", () => {
@@ -24,4 +23,9 @@ test("countVowels counts vowels in a string", () => {
 
 test("countVowels returns zero when there are no vowels", () => {
   expect(countVowels("myths")).toBe(0);
+});
+
+// INTENTIONAL TEST FAILURE
+test("intentional test failure", () => {
+  expect(isEven(3)).toBe(true); // Fails because 3 is odd (returns false)
 });
